@@ -12,7 +12,7 @@ title: Home
 </div>
 
 <div class="hero">
-  <h1>Welcome to Not a Cog Studio</h1>
+  <h1>Not a Cog Studio</h1>
   <p>Indie studio crafting new worlds.</p>
 </div>
 
