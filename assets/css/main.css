@@ -44,7 +44,7 @@ nav {
         }
 
 .hero {
-    background: #0f0f0f; /* matches your main dark background */
+    background: #0f0f0f; 
     color: var(--text-color);
     text-align: center;
     padding: 20px 10px 30px 10px;
@@ -54,7 +54,7 @@ nav {
 
     .hero h1 {
         font-size: 3.5em;
-        margin: 0; /* kill default margin */
+        margin: 0; 
         line-height: 1.1;
     }
 
@@ -67,7 +67,7 @@ nav {
 
 
 .section {
-    background: #0f0f0f; /* same background as hero */
+    background: #0f0f0f;
     padding: 60px 20px;
     max-width: 1000px;
     margin: auto;

@@ -26,7 +26,7 @@ permalink: /team/
     <div class="card">
       <img src="/assets/images/person3.jpg" alt="Team Member 3">
       <h3>Jordan</h3>
-      <p>Sound Designer</p>
+      <p>Developerr</p>
       <p>Some stuff about </p>
     </div>
 
