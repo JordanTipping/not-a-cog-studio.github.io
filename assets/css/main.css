@@ -1,0 +1,142 @@
+:root {
+    --bg-color: #0f0f0f;
+    --primary-color: #1a1a1a;
+    --accent-color: #ffffff;
+    --text-color: #ffffff;
+    --muted-text: #aaaaaa;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: color 0.3s;
+    }
+
+        nav a:hover {
+            color: var(--muted-text);
+        }
+
+.hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.7)), url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+    color: var(--text-color);
+    text-align: center;
+    padding: 150px 20px;
+}
+
+    .hero h1 {
+        font-size: 4em;
+        margin-bottom: 0.3em;
+    }
+
+    .hero p {
+        color: var(--muted-text);
+        font-size: 1.3em;
+        max-width: 600px;
+        margin: auto;
+    }
+
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
+.team-grid, .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .card h3 {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .card p {
+        color: var(--muted-text);
+    }
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--muted-text);
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    background: #111;
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+form button {
+    background-color: var(--text-color);
+    border: none;
+    padding: 15px 25px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+    form button:hover {
+        background-color: var(--muted-text);
+    }
