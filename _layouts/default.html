@@ -21,15 +21,85 @@
 
     {{ content }}
 
+    <!-- Character sprite -->
+    <div id="player"></div>
+
     <footer>
         <p>&copy; {{ site.time | date: '%Y' }} Not a Cog Studio Ltd. All rights reserved.</p>
     </footer>
 
+    <!-- Script -->
     <script>
         function toggleMenu() {
-            const nav = document.getElementById('nav-links');
-            nav.classList.toggle('show');
+            document.getElementById('nav-links').classList.toggle('show');
         }
+
+        const player = document.getElementById('player');
+        let posX = 200;
+        let posY = 350;
+        let dir = 'down';
+        let frame = 0;
+        let moving = false;
+
+        const speed = 2;
+        const spriteSize = 32;
+        const sheetWidth = 128;
+
+        const keys = { w: false, s: false, a: false, d: false };
+
+        document.addEventListener('keydown', e => {
+            if (e.key.toLowerCase() in keys) { keys[e.key.toLowerCase()] = true; moving = true; }
+        });
+
+        document.addEventListener('keyup', e => {
+            if (e.key.toLowerCase() in keys) { keys[e.key.toLowerCase()] = false; moving = Object.values(keys).includes(true); }
+        });
+
+        function gameLoop() {
+            if (keys.w) { dir = 'up'; posY -= speed; }
+            if (keys.s) { dir = 'down'; posY += speed; }
+            if (keys.a) { dir = 'left'; posX -= speed; }
+            if (keys.d) { dir = 'right'; posX += speed; }
+
+            // Animate sprite
+            if (moving) frame = (frame + 1) % 20;
+            else frame = 0;
+
+            const animFrame = Math.floor(frame / 5) % 4;
+
+            const dirMap = { down: 0, right: 1, up: 2, left: 3 };
+            const offsetX = animFrame * spriteSize;
+            const offsetY = dirMap[dir] * spriteSize;
+
+            player.style.left = posX + 'px';
+            player.style.top = posY + 'px';
+            player.style.backgroundPosition = `-${offsetX}px -${offsetY}px`;
+
+            checkNavCollision();
+            requestAnimationFrame(gameLoop);
+        }
+
+        function checkNavCollision() {
+            const navItems = document.querySelectorAll('nav ul li a, .burger');
+            const playerRect = player.getBoundingClientRect();
+            navItems.forEach(item => {
+                const itemRect = item.getBoundingClientRect();
+                if (
+                    playerRect.right > itemRect.left &&
+                    playerRect.left < itemRect.right &&
+                    playerRect.bottom > itemRect.top &&
+                    playerRect.top < itemRect.bottom
+                ) {
+                    if (item.classList.contains('burger')) {
+                        item.click();
+                    } else if (!item.classList.contains('active')) {
+                        window.location = item.href;
+                    }
+                }
+            });
+        }
+
+        gameLoop();
     </script>
 </body>
 </html>
