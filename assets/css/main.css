@@ -155,30 +155,38 @@ footer {
     margin-top: 60px;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-    background: #111;
-    color: var(--text-color);
-    border-radius: 4px;
+/* CONTACT FORM */
+form {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-form button {
-    background-color: var(--text-color);
-    border: none;
-    padding: 15px 25px;
-    color: black;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-    form button:hover {
-        background-color: var(--muted-text);
+    form input, form textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #333;
+        background: #111;
+        color: var(--text-color);
+        border-radius: 4px;
+        font-size: 1.1em;
     }
+
+    form button {
+        background-color: var(--text-color);
+        border: none;
+        padding: 15px 25px;
+        color: black;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 4px;
+        font-size: 1.1em;
+        transition: background 0.3s;
+    }
+
+        form button:hover {
+            background-color: var(--muted-text);
+        }
 
 /* Responsive - MOBILE ONLY */
 @media (max-width: 768px) {
@@ -219,6 +227,23 @@ form button {
     .hero p {
         font-size: 1em;
     }
+
+    /* CONTACT FORM MOBILE TWEAKS */
+    form {
+        padding: 0 10px;
+    }
+
+        form input, form textarea {
+            font-size: 1em;
+            padding: 12px;
+            margin-bottom: 12px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1em;
+        }
 }
 
 @media (min-width: 768px) {
