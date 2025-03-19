@@ -44,29 +44,35 @@ nav {
         }
 
 .hero {
-    background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.7)), url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+    background: #0f0f0f; /* matches your main dark background */
     color: var(--text-color);
     text-align: center;
-    padding: 150px 20px;
+    padding: 20px 10px 30px 10px;
+    margin-top: -30px;
 }
 
+
     .hero h1 {
-        font-size: 4em;
-        margin-bottom: 0.3em;
+        font-size: 3.5em;
+        margin: 0; /* kill default margin */
+        line-height: 1.1;
     }
 
     .hero p {
         color: var(--muted-text);
-        font-size: 1.3em;
+        font-size: 1.1em;
         max-width: 600px;
-        margin: auto;
+        margin: 5px auto 0 auto; 
     }
 
+
 .section {
+    background: #0f0f0f; /* same background as hero */
     padding: 60px 20px;
     max-width: 1000px;
     margin: auto;
 }
+
 
 h1, h2, h3 {
     color: var(--text-color);
@@ -140,3 +146,32 @@ form button {
     form button:hover {
         background-color: var(--muted-text);
     }
+
+
+.showreel-container {
+    background: #111;
+    padding: 0;
+    margin: 0;
+}
+
+
+.showreel-placeholder {
+    width: 100%;
+    height: 180px; 
+    background: #222;
+    color: var(--muted-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    margin: 0; 
+    padding: 0;
+}
+
+
+
+@media (min-width: 768px) {
+    .showreel-placeholder {
+        height: 400px;
+    }
+}
