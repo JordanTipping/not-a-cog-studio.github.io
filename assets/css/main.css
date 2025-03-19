@@ -29,6 +29,7 @@ nav {
         margin: 0;
         padding: 0;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     nav a {
@@ -44,17 +45,16 @@ nav {
         }
 
 .hero {
-    background: #0f0f0f; 
+    background: #0f0f0f;
     color: var(--text-color);
     text-align: center;
     padding: 20px 10px 30px 10px;
     margin-top: -30px;
 }
 
-
     .hero h1 {
         font-size: 3.5em;
-        margin: 0; 
+        margin: 0;
         line-height: 1.1;
     }
 
@@ -62,9 +62,8 @@ nav {
         color: var(--muted-text);
         font-size: 1.1em;
         max-width: 600px;
-        margin: 5px auto 0 auto; 
+        margin: 5px auto 0 auto;
     }
-
 
 .section {
     background: #0f0f0f;
@@ -72,7 +71,6 @@ nav {
     max-width: 1000px;
     margin: auto;
 }
-
 
 h1, h2, h3 {
     color: var(--text-color);
@@ -148,30 +146,45 @@ form button {
     }
 
 
+
 .showreel-container {
     background: #111;
     padding: 0;
     margin: 0;
 }
 
-
 .showreel-placeholder {
     width: 100%;
-    height: 180px; 
+    height: 140px; 
     background: #222;
     color: var(--muted-text);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.1em;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
-
+/* For device responsiceness */
 
 @media (min-width: 768px) {
     .showreel-placeholder {
-        height: 400px;
+        height: 250px; /* larger on desktop */
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1em;
     }
 }
