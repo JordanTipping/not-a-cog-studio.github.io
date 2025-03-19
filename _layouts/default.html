@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/team' | relative_url }}">Team</a></li>
-            <li><a href="{{ '/portfolio' | relative_url }}">Portfolio</a></li>
-            <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <ul id="nav-links">
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/team' | relative_url }}">Team</a></li>
+                <li><a href="{{ '/portfolio' | relative_url }}">Portfolio</a></li>
+                <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+            </ul>
+            <div class="burger" onclick="toggleMenu()">☰</div>
+        </div>
     </nav>
 
     {{ content }}
@@ -21,5 +24,12 @@
     <footer>
         <p>&copy; {{ site.time | date: '%Y' }} Not a Cog Studio Ltd. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav-links');
+            nav.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
