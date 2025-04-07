@@ -1,6 +1,25 @@
 title: "Not A Cog Studio"
-description: "Game Dev and Creative Solutions"
-remote-theme: pmarsceill/just-the-docs
+description: "Indie Game Development, Ethical Software & Creative Web Solutions"
+remote_theme: pmarsceill/just-the-docs
 color_scheme: dark
 
+# SEO & Metadata
+url: "https://notacog.studio"  
+baseurl: ""  
 
+# Social & Search Engines
+author: "Not A Cog Studio"
+lang: "en-GB"
+keywords: "indie game studio, game development, creative tech studio, UK game developers, web design, Unreal Engine, custom tools, small dev team, software for creators, Not a Cog"
+
+# Markdown / Build
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Just the Docs Settings 
+search_enabled: true
+search_tokenizer_separator: /[\s/]+/

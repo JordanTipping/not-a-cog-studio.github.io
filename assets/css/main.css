@@ -27,7 +27,6 @@ body {
     image-rendering: pixelated;
 }
 
-
 nav {
     background-color: var(--primary-color);
     padding: 20px;
@@ -56,11 +55,14 @@ nav a {
     color: var(--text-color);
     font-weight: bold;
     font-size: 1.1em;
-    transition: color 0.3s;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
 }
 
     nav a:hover {
-        color: var(--muted-text);
+        background: var(--text-color);
+        color: var(--bg-color);
     }
 
 .burger {
@@ -92,31 +94,77 @@ nav a {
     padding: 0;
 }
 
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #222;
+    color: var(--muted-text);
+}
+
+    .carousel-slide.active {
+        display: flex;
+    }
+
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+    .carousel-buttons button {
+        width: 14px;
+        height: 14px;
+        background: #555; /* grey by default */
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+        .carousel-buttons button.active {
+            background: #fff; /* white when active */
+            transform: scale(1.2);
+        }
+
+
 .hero {
     background: #0f0f0f;
     color: var(--text-color);
     text-align: center;
-    padding: 20px 10px 30px 10px;
-    margin-top: -30px;
+    padding: 10px 20px;
+    margin: 0;
+   
 }
 
     .hero h1 {
-        font-size: 3.5em;
+        font-size: 5em;
+        font-weight: 900;
         margin: 0;
-        line-height: 1.1;
     }
 
     .hero p {
         color: var(--muted-text);
-        font-size: 1.1em;
-        max-width: 600px;
-        margin: 5px auto 0 auto;
+        font-size: 1.5em;
+        margin-top: 20px;
     }
 
 /* General Sections */
 .section {
     background: #0f0f0f;
-    padding: 60px 20px;
+    padding: 5px 20px;
     max-width: 1000px;
     margin: auto;
 }
@@ -175,7 +223,8 @@ form {
     margin: 0 auto;
 }
 
-    form input, form textarea {
+    form input,
+    form textarea {
         width: 100%;
         padding: 15px;
         margin-bottom: 15px;
@@ -201,6 +250,22 @@ form {
         form button:hover {
             background-color: var(--muted-text);
         }
+
+/* CONTACT PAGE FIX ONLY */
+#contact > p,
+#contact .contact-email {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+#contact h1 {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    padding: 30px;
+}
+
 
 /* Responsive - MOBILE ONLY */
 @media (max-width: 768px) {
@@ -242,12 +307,12 @@ form {
         font-size: 1em;
     }
 
-    /* CONTACT FORM MOBILE TWEAKS */
     form {
         padding: 0 10px;
     }
 
-        form input, form textarea {
+        form input,
+        form textarea {
             font-size: 1em;
             padding: 12px;
             margin-bottom: 12px;

@@ -1,31 +1,45 @@
 ---
 layout: default
-title: Portfolio
+title: Our Portfolio | Not A Cog Studio
+description: Explore the portfolio of Not A Cog Studio - an indie team crafting original games, custom tools, and creative software solutions.
 permalink: /portfolio/
 ---
 
-<div class="section">
-  <h1>Our Portfolio</h1>
+<section class="section" aria-labelledby="portfolio-heading">
+  <h1 id="portfolio-heading">Our Portfolio</h1>
+  <p>A selection of our creative projects</p>
 
   <div class="portfolio-grid">
 
     <div class="card">
-      <img src="/assets/images/game1.jpg" alt="Game 1">
+      <!-- Placeholder image - replace with game1 screenshot -->
+      <div style="width:100%;height:200px;background:#333;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:center;color:#aaa;font-style:italic;">
+        Coming Soon
+      </div>
+      <!-- <img src="/assets/images/game1.jpg" alt="Project One - Indie Game by Not A Cog Studio"> -->
       <h3>Project One</h3>
-      <p>Something we worked on</p>
+      <p>An original game prototype built in Unreal Engine.</p>
     </div>
 
     <div class="card">
-      <img src="/assets/images/game2.jpg" alt="Game 2">
+      <!-- Placeholder image - replace with game2 screenshot -->
+      <div style="width:100%;height:200px;background:#333;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:center;color:#aaa;font-style:italic;">
+        Coming Soon
+      </div>
+      <!-- <img src="/assets/images/game2.jpg" alt="Project Two - Game Development by Not A Cog Studio"> -->
       <h3>Project Two</h3>
-      <p>More</p>
+      <p>An original game prototype built in Unreal Engine.</p>
     </div>
 
     <div class="card">
-      <img src="/assets/images/game3.jpg" alt="Game 3">
+      <!-- Placeholder image - replace with game3 screenshot -->
+      <div style="width:100%;height:200px;background:#333;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:center;color:#aaa;font-style:italic;">
+        Coming Soon
+      </div>
+      <!-- <img src="/assets/images/game3.jpg" alt="Project Three - Creative Software by Not A Cog Studio"> -->
       <h3>Project Three</h3>
-      <p>More.</p>
+      <p>An original game prototype built in Unreal Engine..</p>
     </div>
 
   </div>
-</div>
+</section>
