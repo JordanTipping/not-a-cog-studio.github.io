@@ -37,7 +37,7 @@ nav {
 
 .nav-container {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the nav on desktop */
     align-items: center;
     position: relative;
 }
@@ -66,9 +66,9 @@ nav a {
     }
 
 .burger {
-    display: none;
+    display: none; /* Hide the burger menu by default on desktop */
     position: absolute;
-    right: 20px;
+    left: 20px; /* Move it to the left side */
     font-size: 1.8em;
     color: var(--text-color);
     cursor: pointer;
@@ -139,14 +139,12 @@ nav a {
             transform: scale(1.2);
         }
 
-
 .hero {
     background: #0f0f0f;
     color: var(--text-color);
     text-align: center;
     padding: 10px 20px;
     margin: 0;
-   
 }
 
     .hero h1 {
@@ -266,11 +264,10 @@ form {
     padding: 30px;
 }
 
-
 /* Responsive - MOBILE ONLY */
 @media (max-width: 768px) {
     .burger {
-        display: block;
+        display: block; /* Show burger on mobile */
     }
 
     nav ul {
@@ -280,7 +277,7 @@ form {
         background: var(--primary-color);
         position: absolute;
         top: 60px;
-        right: 20px;
+        left: 20px; /* Align under the burger */
         padding: 10px;
         border-radius: 5px;
         opacity: 0;
@@ -296,7 +293,7 @@ form {
 
         nav ul li {
             padding: 10px 0;
-            text-align: center;
+            text-align: left;
         }
 
     .hero h1 {
