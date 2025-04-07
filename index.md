@@ -33,6 +33,8 @@ description: Not a Cog is an independent game and development studio crafting or
 </section>
 
 
+
+
 <!-- Keywords for SEO (hidden for screen readers) -->
 <div style="display:none; visibility:hidden;">
   indie game studio UK,game development, original indie games, custom game mechanics, Unreal Engine developers, Unity developers, game prototyping studio, small game studio UK, narrative games, multiplayer indie games, web development for creative studios, software tools for creators, ethical software development, custom web development, UK web design studio, small business websites, e-commerce alternatives, static site design, creative tech studio, digital tools for teams, immersive experiences, Not a Cog Studio, UK-based indie developers
