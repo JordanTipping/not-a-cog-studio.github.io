@@ -14,7 +14,7 @@
     <meta property="og:description" content="{{ page.description | default: site.description }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}"> <!-- optional -->
+    <meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}"> 
 
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
@@ -66,32 +66,47 @@
         showSlide(0); 
     </script>
 
-
     <script>
-        function showSuccessMessage(event) {
-            event.preventDefault(); 
-            const form = document.getElementById("contact-form");
+        // Handle the form submission using Fetch API to prevent redirect
+        document.getElementById('contact-form').onsubmit = function (event) {
+            event.preventDefault(); // Prevent the default form submission
 
-            // Show the success message
+            // Check if the honeypot field is filled (spam prevention)
+            if (document.querySelector('[name="_gotcha"]').value) {
+                return; // prevent submission
+            }
+
+            //success message
             document.getElementById("success-message").style.display = "block";
 
-            // Optionally, hide the form
-            form.style.display = "none";
+            // Hide the form after submission
+            document.getElementById("contact-form").style.display = "none";
 
-            // Submit the form using Formspree
-            fetch(form.action, {
+            //Fetch API to Formspree
+            fetch(event.target.action, {
                 method: "POST",
-                body: new FormData(form)
-            }).then(response => {
-                if (response.ok) {
-                    console.log("Form successfully submitted.");
-                } else {
-                    console.log("There was an issue with the form submission.");
-                }
-            }).catch(error => {
-                console.log("Error submitting form: ", error);
-            });
-        }
+                body: new FormData(event.target),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        console.log("There was an issue submitting the form");
+                    }
+                })
+                .catch(error => {
+                    console.log("Error submitting form: ", error);
+                });
+        };
+
+        // prevent multiple submissions in a short time
+        let submitting = false;
+        document.querySelector('button[type="submit"]').addEventListener('click', function () {
+            if (submitting) {
+                event.preventDefault();
+            } else {
+                submitting = true;
+                setTimeout(() => { submitting = false; }, 10000); // limit resubmission for 10 seconds
+            }
+        });
     </script>
 
 

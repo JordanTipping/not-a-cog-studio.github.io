@@ -3,37 +3,20 @@
   <p>Want to collaborate, hire us, or ask a question? Drop us a message using the form below. We'd love to hear from you.</p>
 
 <!-- Contact Form -->
-<!-- Contact Form -->
-<form
-  id="contact-form"
-  action="https://formspree.io/f/xdkepdvk"  <!-- Your Formspree endpoint -->
-  method="POST"
-  enctype="multipart/form-data"
-  onsubmit="showSuccessMessage(event)"
->
-  <label>
-    Your Name:
-    <input type="text" name="name" required>
-
-    
-    <input type="text" name="_gotcha" style="display:none">
-  </label>
-  <label>
-    Your Email:
-    <input type="email" name="_replyto" required>
-  </label>
-  <label>
-    Your Message:
-    <textarea name="message" rows="5" required></textarea>
-  </label>
+<form id="contact-form" action="https://formspree.io/f/xdkepdvk" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="_replyto" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
   <button type="submit">Send Message</button>
+
+  <!-- Hidden Honeypot Field for Spam Prevention -->
+  <input type="text" name="_gotcha" style="display:none">
 </form>
 
-<!-- Success Message -->
+<!-- Success Message (hidden by default) -->
 <div id="success-message" style="display:none; margin-top: 20px;">
   <p>Thank you! We will get back to you shortly.</p>
 </div>
-
 
 
   <div class="contact-email">
