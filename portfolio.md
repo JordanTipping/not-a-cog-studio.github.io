@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Our Portfolio | Not A Cog Studio
-description: Explore the portfolio of Not A Cog Studio - an indie team crafting original games, custom tools, and creative software solutions.
+description: The portfolio of Not A Cog Studio - an indie team crafting original games, custom tools, and creative software solutions.
 permalink: /portfolio/
 ---
 
