@@ -1,6 +1,6 @@
 <section class="section" id="contact" aria-labelledby="contact-heading">
   <h1 id="contact-heading">Contact Us</h1>
-  <p>Want to collaborate, hire us, or ask a question? Drop us a message using the form below. We'd love to hear from you.</p>
+  <p>Want to collaborate, hire us, or ask a question? Drop us a message using the form below. We'd love to hear from you. Mostafa</p>
 
 <!-- Contact Form -->
 <form id="contact-form" action="https://formspree.io/f/xdkepdvk" method="POST">
