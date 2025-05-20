@@ -61,7 +61,7 @@ description: Not a Cog is an independent game and development studio crafting or
 <!-- Call to Action -->
 <section class="section" aria-labelledby="contact-heading">
   <h2 id="contact-heading" style="text-align: center;">Let's Work Together</h2>
-  <p style="text-align: center;">If you're looking to collaborate on a game, need a reliable technical partner, or just want to talk through an idea - reach out. We don't do forms. Just email us directly.</p>
+  <p style="text-align: center;">If you're looking to collaborate on a game, need a reliable technical partner, or just want to talk through an idea - reach out. Email us directly below.</p>
   <p style="text-align: center;"><strong>Email:</strong> contact@notacog.com</p>
 </section>
 
