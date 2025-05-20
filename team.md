@@ -8,7 +8,7 @@ permalink: /team/
 <section class="section" aria-labelledby="team-heading">
 <h1 id="team-heading" style="text-align: center;">Meet the Team</h1>
 <p style="text-align: center;">
-  We're a small, focused team building original games, tools, and software from the ground up. Our team works across multiple roles, combining technical skills with creativity. We work closely, iterate quickly, and care about the things we make.
+   Our team works across multiple roles, combining technical skills with creativity. We work closely, iterate quickly, and care about the things we make.
 </p>
 
 
