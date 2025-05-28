@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-    <!--Google Analytics Tag-->
-    <!-- Google tag (gtag.js) -->
-
+    <!-- Google Analytics Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-97JL46MZC2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-97JL46MZC2');
     </script>
-
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,6 +25,10 @@
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}">
 
+    <!-- Load Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
@@ -40,7 +38,7 @@
             <ul id="nav-links">
                 <li><a href="{{ '/' | relative_url }}">Home</a></li>
                 <li><a href="{{ '/team' | relative_url }}">Team</a></li>
-            <!--    <li><a href="{{ '/portfolio' | relative_url }}">Portfolio</a></li> -->
+                <li><a href="{{ '/news' | relative_url }}">News</a></li>
                 <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
             </ul>
         </div>
@@ -53,7 +51,6 @@
             document.getElementById('nav-links').classList.toggle('show');
         }
     </script>
-
 
     <script>
         let currentSlide = 0;
@@ -77,27 +74,22 @@
             showSlide(currentSlide);
         }
 
-        setInterval(autoAdvance, 3000); // 4 seconds
+        setInterval(autoAdvance, 3000); // 3 seconds
         showSlide(0);
     </script>
 
     <script>
-        // Handle the form submission using Fetch API to prevent redirect
+        // Handle form submission using Fetch API
         document.getElementById('contact-form').onsubmit = function (event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
 
-            // Check if the honeypot field is filled (spam prevention)
             if (document.querySelector('[name="_gotcha"]').value) {
-                return; // prevent submission
+                return;
             }
 
-            //success message
             document.getElementById("success-message").style.display = "block";
-
-            // Hide the form after submission
             document.getElementById("contact-form").style.display = "none";
 
-            //Fetch API to Formspree
             fetch(event.target.action, {
                 method: "POST",
                 body: new FormData(event.target),
@@ -112,25 +104,19 @@
                 });
         };
 
-        // prevent multiple submissions in a short time
         let submitting = false;
         document.querySelector('button[type="submit"]').addEventListener('click', function () {
             if (submitting) {
                 event.preventDefault();
             } else {
                 submitting = true;
-                setTimeout(() => { submitting = false; }, 10000); // limit resubmission for 10 seconds
+                setTimeout(() => { submitting = false; }, 10000);
             }
         });
     </script>
 
-
-
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Not a Cog Studio Ltd. All rights reserved.</p>
     </footer>
-
-
 </body>
 </html>

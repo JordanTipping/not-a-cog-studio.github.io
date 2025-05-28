@@ -4,6 +4,9 @@ title: Not a Cog | Indie Game & Software Studio
 description: Not a Cog is an independent game and development studio crafting original experiences. Based in the UK, we create games, websites, software and tools.
 ---
 
+<!-- Load Inter font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <!-- 
   Carousel Section
   Requested by the team. Left here rotting with zero content, no alt tags, and dumped on Jordan to magically finish.
@@ -24,24 +27,30 @@ description: Not a Cog is an independent game and development studio crafting or
 </section>
 -->
 
+<!-- PUT ANY NEWS HERE.-->
+<section class="scrolling-banner">
+  <p class="scrolling-text">
+    🚨 <a href="/news/" style="color: white; text-decoration: none;">Breaking News: We just dropped our first teaser trailer, click here! 🚨</a> 
+  </p>
+</section>
+
 <!-- Hero Section -->
 <header class="hero" role="banner">
-  <h1 class="hero-title">Not a Cog Studio</h1>
+  <h1 class="hero-title">NOT A COG STUDIO</h1>
   <p class="hero-subtitle">Independent game and software development from the UK.</p>
 </header>
 
 <!-- About Section -->
 <section class="section" aria-labelledby="about-heading">
+<p style="text-align: center;">
+  Not a Cog Studio is a small indie team based in the UK, made up of three developers with backgrounds in programming, game design, art, and audio. 
+  We're currently working on our debut title aswell as client work in both games and software.
+</p>
 
-  <p style="text-align: center;">
-    Not a Cog Studio Ltd is an indie game and software development studio founded by three developers with experience across game design, programming, art, audio, and software.
-    We create original games, interactive tools, and software systems that value clarity, performance, and creative control.
-  </p>
 </section>
 
 <!-- What We Make Section -->
 <section class="section" aria-labelledby="what-heading">
-
   <div class="grid-three">
     <div class="feature-box">
       <h3>Original Games</h3>
