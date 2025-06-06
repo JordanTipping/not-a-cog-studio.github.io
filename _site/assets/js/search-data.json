@@ -1,0 +1,65 @@
+{"0": {
+    "doc": "News | Not A Cog Studio",
+    "title": "Studio News",
+    "content": "The latest updates, development logs, and announcements from the Not A Cog team. Teaser Trailer Official Teaser: Spring 2025 . May 28, 2025 . Weve just dropped a teaser trailer for our first game. It doesnt reveal the title, or even any mechanics, but it sets the tone for whats to come. Expect a darkly twisted mix of dark humour and sheer terror. We are deep in the lab, grinding away to bring this vision to life. The team are working super hard, and we felt like we wanted to say something, anything. We are saving the mechanics and the name reveal for later, but for now, we wanted to immerse you in the tone. We genuinely believe that this project is fresh, exciting, and something that we would love to play as gamers and not just devs. A full reveal is coming, but at the right time. For now, we keep working. Follow our progress: . Website: https://notacog.studio X: https://x.com/NotACogStudio LinkedIn: https://www.linkedin.com/company/not-a-cog-studio Team Update New Site, Same Studio . May 20, 2025 . We added this news page to keep things documented and share what we're actually doing, as we do it. We'll be posting dev logs, videos, design notes, weird bugs, experiments, milestones, and anything else we think is worth archiving or showing. This isnt a big marketing push, its just a place to keep track, stay open, and have somewhere to point people who are interested. Youll see scrappy builds, early thoughts, and finished systems here over time. It will grow alongside the projects we are making. ",
+    "url": "/news/#news-heading",
+    
+    "relUrl": "/news/#news-heading"
+  },"1": {
+    "doc": "News | Not A Cog Studio",
+    "title": "News | Not A Cog Studio",
+    "content": " ",
+    "url": "/news/",
+    
+    "relUrl": "/news/"
+  },"2": {
+    "doc": "Our Portfolio | Not A Cog Studio",
+    "title": "Our Portfolio",
+    "content": "A selection of our creative projects . Coming Soon Project One . An original game prototype built in Unreal Engine. Coming Soon Project Two . An original game prototype built in Unreal Engine. Coming Soon Project Three . An original game prototype built in Unreal Engine.. ",
+    "url": "/portfolio/#portfolio-heading",
+    
+    "relUrl": "/portfolio/#portfolio-heading"
+  },"3": {
+    "doc": "Our Portfolio | Not A Cog Studio",
+    "title": "Our Portfolio | Not A Cog Studio",
+    "content": " ",
+    "url": "/portfolio/",
+    
+    "relUrl": "/portfolio/"
+  },"4": {
+    "doc": "Meet the Team | Not A Cog Studio",
+    "title": "Meet the Team",
+    "content": "Our team works across multiple roles, combining technical skills with creativity. We work closely, iterate quickly, and care about the things we make. Seb . Art, Design &amp; Client Training . Seb is responsible for the visual direction and design across both our games and software projects. His role includes concept art, asset styling, UI layout, and overall visual consistency. He also helps with design planning, like level structure and user flow. On the software side, Seb handles client training. He makes sure users know how to navigate and use the tools we deliver, whether it's a web dashboard or a custom-built system. Seb also contributes during playtesting and design review sessions, helping spot areas where visual communication or layout can be improved. His input often helps translate raw mechanics into something readable, playable, and more satisfying. Scott . Audio &amp; Gameplay . Scott takes the lead on developing crucial systems early and effectively. He researches untested ideas, builds early test cases, and pushes into unfamiliar territory to see what's possible before it reaches production. He focuses on rapid prototyping and proof of concept, allowing us to trial and evaluate new directions quickly. Whether it's building networked systems or proximity chat, Scott lays the groundwork so the rest of the team can iterate. In addition to gameplay, Scott also handles implementation of dynamic audio, including sound effects, spatial cues, and reactive mixing, helping to shape the feel and responsiveness of each game moment. Jordan . Gameplay &amp; Studio Ops . Jordan handles core gameplay programming and the internal systems that keep our games and tools running smoothly. He manages backend infrastructure, builds and maintains web projects, and sets up pipelines that support development and deployment. Outside of development, Jordan takes care of the day to day studio operations, including sales, client onboarding and invoicing, helping keep the business side moving while driving production forward. He also supports long-term planning across projects, ensuring that what gets built today will still scale and function tomorrow. Whether it's code, documentation, or client work, Jordan keeps things structured and moving. ",
+    "url": "/team/#team-heading",
+    
+    "relUrl": "/team/#team-heading"
+  },"5": {
+    "doc": "Meet the Team | Not A Cog Studio",
+    "title": "Meet the Team | Not A Cog Studio",
+    "content": " ",
+    "url": "/team/",
+    
+    "relUrl": "/team/"
+  },"6": {
+    "doc": "Not a Cog | Indie Game & Software Studio",
+    "title": "NOT A COG STUDIO",
+    "content": "Independent game and software development from the UK. Not a Cog Studio is a small indie team based in the UK, made up of three developers with backgrounds in programming, game design, art, and audio. We're currently working on our debut title aswell as client work in both games and software. Original Games . We design and develop our own titles from the ground up - gameplay-first, independently produced, and unapologetically weird when they need to be. Custom Tools . We build tools for creators, studios, and clients - from standalone editors and pipelines to plugin systems and web integrations that streamline real work. Web & Software . We create clean, fast web platforms and backend systems with a focus on maintainability, security, and clear UX - no bloat, no fluff. ",
+    "url": "/",
+    
+    "relUrl": "/"
+  },"7": {
+    "doc": "Not a Cog | Indie Game & Software Studio",
+    "title": "Let's Work Together",
+    "content": "If you're looking to collaborate on a game, need a reliable technical partner, or just want to talk through an idea - reach out. Email us directly below. Email: contact@notacog.studio . indie game studio UK,game development, original indie games, custom game mechanics, Unreal Engine developers, Unity developers, game prototyping studio, small game studio UK, narrative games, multiplayer indie games, web development for creative studios, software tools for creators, ethical software development, custom web development, UK web design studio, small business websites, e-commerce alternatives, static site design, creative tech studio, digital tools for teams, immersive experiences, Not a Cog Studio, UK-based indie developers ",
+    "url": "/#contact-heading",
+    
+    "relUrl": "/#contact-heading"
+  },"8": {
+    "doc": "Not a Cog | Indie Game & Software Studio",
+    "title": "Not a Cog | Indie Game & Software Studio",
+    "content": "| 🚨 Breaking News: We just dropped our first teaser trailer, click here! 🚨 . ",
+    "url": "/",
+    
+    "relUrl": "/"
+  }
+}

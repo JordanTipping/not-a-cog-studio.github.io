@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-97JL46MZC2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-97JL46MZC2');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Not a Cog is an independent game and development studio crafting original experiences. Based in the UK, we create games, websites, software and tools." />
+    <meta name="keywords" content="indie game studio, ethical game dev, web development, software tools, Not a Cog Studio, UK game dev, creative tech" />
+    <meta name="author" content="Not a Cog Studio" />
+
+    <title>Not a Cog Studio</title>
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Not a Cog Studio" />
+    <meta property="og:description" content="Not a Cog is an independent game and development studio crafting original experiences. Based in the UK, we create games, websites, software and tools." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notacog.studio" />
+    <meta property="og:image" content="/assets/img/og-image.jpg" />
+
+    <!-- Load Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="burger" onclick="toggleMenu()">☰</div>
+            <ul id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 💡 This is where the page content will appear -->
+    <main>
+        <slot />
+    </main>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-links').classList.toggle('show');
+        }
+    </script>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const buttons = document.querySelectorAll('.carousel-buttons button');
+
+        function showSlide(index) {
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+                buttons[i].classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        function autoAdvance() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(autoAdvance, 3000);
+        showSlide(0);
+    </script>
+
+    <script>
+        document.getElementById('contact-form')?.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (document.querySelector('[name="_gotcha"]').value) {
+                return;
+            }
+
+            document.getElementById("success-message").style.display = "block";
+            document.getElementById("contact-form").style.display = "none";
+
+            fetch(event.target.action, {
+                method: "POST",
+                body: new FormData(event.target),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        console.log("There was an issue submitting the form");
+                    }
+                })
+                .catch(error => {
+                    console.log("Error submitting form: ", error);
+                });
+        });
+
+        let submitting = false;
+        document.querySelector('button[type="submit"]')?.addEventListener('click', function (event) {
+            if (submitting) {
+                event.preventDefault();
+            } else {
+                submitting = true;
+                setTimeout(() => { submitting = false; }, 10000);
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Not a Cog Studio Ltd. All rights reserved.</p>
+    </footer>
+</body>
+</html>

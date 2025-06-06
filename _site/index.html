@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-97JL46MZC2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-97JL46MZC2');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Not a Cog is an independent game and development studio crafting original experiences. Based in the UK, we create games, websites, software and tools.">
+    <meta name="keywords" content="indie game studio, ethical game dev, web development, software tools, Not a Cog Studio, UK game dev, creative tech">
+    <meta name="author" content="Not A Cog Studio">
+
+    <title>Not a Cog | Indie Game & Software Studio | Not A Cog Studio</title>
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Not a Cog | Indie Game & Software Studio | Not A Cog Studio">
+    <meta property="og:description" content="Not a Cog is an independent game and development studio crafting original experiences. Based in the UK, we create games, websites, software and tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:image" content="http://localhost:4000/assets/img/og-image.jpg">
+
+    <!-- Load Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="burger" onclick="toggleMenu()">☰</div>
+            <ul id="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Load Inter font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+
+<!-- 
+  Carousel Section
+  Requested by the team. Left here rotting with zero content, no alt tags, and dumped on Jordan to magically finish.
+  Commented out until someone actually contributes images or replaces this with something real.
+-->
+<!--
+<section class="showreel-container" aria-label="Studio Showreel">
+  <div class="carousel" id="carousel">
+    <div class="carousel-slide active"><strong>IMAGE 1</strong></div>
+    <div class="carousel-slide"><strong>IMAGE 2</strong></div>
+    <div class="carousel-slide"><strong>IMAGE 3</strong></div>
+  </div>
+  <div class="carousel-buttons">
+    <button onclick="goToSlide(0)"></button>
+    <button onclick="goToSlide(1)"></button>
+    <button onclick="goToSlide(2)"></button>
+  </div>
+</section>
+-->
+
+<!-- PUT ANY NEWS HERE.-->
+<section class="scrolling-banner">
+  <p class="scrolling-text">
+    🚨 <a href="/news/" style="color: white; text-decoration: none;">Breaking News: We just dropped our first teaser trailer, click here! 🚨</a> 
+  </p>
+</section>
+
+<!-- Hero Section -->
+<header class="hero" role="banner">
+  <h1 class="hero-title">NOT A COG STUDIO</h1>
+  <p class="hero-subtitle">Independent game and software development from the UK.</p>
+</header>
+
+<!-- About Section -->
+<section class="section" aria-labelledby="about-heading">
+<p style="text-align: center;">
+  Not a Cog Studio is a small indie team based in the UK, made up of three developers with backgrounds in programming, game design, art, and audio. 
+  We're currently working on our debut title aswell as client work in both games and software.
+</p>
+
+</section>
+
+<!-- What We Make Section -->
+<section class="section" aria-labelledby="what-heading">
+  <div class="grid-three">
+    <div class="feature-box">
+      <h3>Original Games</h3>
+      <p>We design and develop our own titles from the ground up - gameplay-first, independently produced, and unapologetically weird when they need to be.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Custom Tools</h3>
+      <p>We build tools for creators, studios, and clients - from standalone editors and pipelines to plugin systems and web integrations that streamline real work.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Web &amp; Software</h3>
+      <p>We create clean, fast web platforms and backend systems with a focus on maintainability, security, and clear UX - no bloat, no fluff.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section" aria-labelledby="contact-heading">
+  <h2 id="contact-heading" style="text-align: center;">Let's Work Together</h2>
+  <p style="text-align: center;">If you're looking to collaborate on a game, need a reliable technical partner, or just want to talk through an idea - reach out. Email us directly below.</p>
+  <p style="text-align: center;"><strong>Email:</strong> contact@notacog.studio</p>
+</section>
+
+<!-- Keywords for SEO (hidden for screen readers) -->
+<div style="display:none; visibility:hidden;">
+  indie game studio UK,game development, original indie games, custom game mechanics, Unreal Engine developers, Unity developers, game prototyping studio, small game studio UK, narrative games, multiplayer indie games, web development for creative studios, software tools for creators, ethical software development, custom web development, UK web design studio, small business websites, e-commerce alternatives, static site design, creative tech studio, digital tools for teams, immersive experiences, Not a Cog Studio, UK-based indie developers
+</div>
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-links').classList.toggle('show');
+        }
+    </script>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const buttons = document.querySelectorAll('.carousel-buttons button');
+
+        function showSlide(index) {
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+                buttons[i].classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        function autoAdvance() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(autoAdvance, 3000); // 3 seconds
+        showSlide(0);
+    </script>
+
+    <script>
+        // Handle form submission using Fetch API
+        document.getElementById('contact-form').onsubmit = function (event) {
+            event.preventDefault();
+
+            if (document.querySelector('[name="_gotcha"]').value) {
+                return;
+            }
+
+            document.getElementById("success-message").style.display = "block";
+            document.getElementById("contact-form").style.display = "none";
+
+            fetch(event.target.action, {
+                method: "POST",
+                body: new FormData(event.target),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        console.log("There was an issue submitting the form");
+                    }
+                })
+                .catch(error => {
+                    console.log("Error submitting form: ", error);
+                });
+        };
+
+        let submitting = false;
+        document.querySelector('button[type="submit"]').addEventListener('click', function () {
+            if (submitting) {
+                event.preventDefault();
+            } else {
+                submitting = true;
+                setTimeout(() => { submitting = false; }, 10000);
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Not a Cog Studio Ltd. All rights reserved.</p>
+    </footer>
+</body>
+</html>

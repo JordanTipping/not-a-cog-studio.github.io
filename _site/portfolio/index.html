@@ -12,39 +12,77 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="description" content="The portfolio of Not A Cog Studio - an indie team crafting original games, custom tools, and creative software solutions.">
     <meta name="keywords" content="indie game studio, ethical game dev, web development, software tools, Not a Cog Studio, UK game dev, creative tech">
-    <meta name="author" content="{{ site.author | default: 'Not a Cog Studio' }}">
+    <meta name="author" content="Not A Cog Studio">
 
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>Our Portfolio | Not A Cog Studio | Not A Cog Studio</title>
 
     <!-- Open Graph / Twitter Cards -->
-    <meta property="og:title" content="{{ page.title }} | {{ site.title }}">
-    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:title" content="Our Portfolio | Not A Cog Studio | Not A Cog Studio">
+    <meta property="og:description" content="The portfolio of Not A Cog Studio - an indie team crafting original games, custom tools, and creative software solutions.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:image" content="{{ '/assets/img/og-image.jpg' | absolute_url }}">
+    <meta property="og:url" content="http://localhost:4000/portfolio/">
+    <meta property="og:image" content="http://localhost:4000/assets/img/og-image.jpg">
 
     <!-- Load Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <div class="burger" onclick="toggleMenu()">☰</div>
             <ul id="nav-links">
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/team' | relative_url }}">Team</a></li>
-                <li><a href="{{ '/news' | relative_url }}">News</a></li>
-                <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/team">Team</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    {{ content }}
+    <section class="section" aria-labelledby="portfolio-heading">
+  <h1 id="portfolio-heading">Our Portfolio</h1>
+  <p>A selection of our creative projects</p>
+
+  <div class="portfolio-grid">
+
+    <div class="card">
+      <!-- Placeholder image - replace with game1 screenshot -->
+      <div style="width:100%;height:200px;background:#333;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:center;color:#aaa;font-style:italic;">
+        Coming Soon
+      </div>
+      <!-- <img src="/assets/images/game1.jpg" alt="Project One - Indie Game by Not A Cog Studio"> -->
+      <h3>Project One</h3>
+      <p>An original game prototype built in Unreal Engine.</p>
+    </div>
+
+    <div class="card">
+      <!-- Placeholder image - replace with game2 screenshot -->
+      <div style="width:100%;height:200px;background:#333;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:center;color:#aaa;font-style:italic;">
+        Coming Soon
+      </div>
+      <!-- <img src="/assets/images/game2.jpg" alt="Project Two - Game Development by Not A Cog Studio"> -->
+      <h3>Project Two</h3>
+      <p>An original game prototype built in Unreal Engine.</p>
+    </div>
+
+    <div class="card">
+      <!-- Placeholder image - replace with game3 screenshot -->
+      <div style="width:100%;height:200px;background:#333;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:center;color:#aaa;font-style:italic;">
+        Coming Soon
+      </div>
+      <!-- <img src="/assets/images/game3.jpg" alt="Project Three - Creative Software by Not A Cog Studio"> -->
+      <h3>Project Three</h3>
+      <p>An original game prototype built in Unreal Engine..</p>
+    </div>
+
+  </div>
+</section>
+
 
     <script>
         function toggleMenu() {
