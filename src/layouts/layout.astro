@@ -56,32 +56,6 @@
     </script>
 
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const buttons = document.querySelectorAll('.carousel-buttons button');
-
-        function showSlide(index) {
-            slides.forEach((s, i) => {
-                s.classList.toggle('active', i === index);
-                buttons[i].classList.toggle('active', i === index);
-            });
-            currentSlide = index;
-        }
-
-        function goToSlide(index) {
-            showSlide(index);
-        }
-
-        function autoAdvance() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        setInterval(autoAdvance, 3000);
-        showSlide(0);
-    </script>
-
-    <script>
         document.getElementById('contact-form')?.addEventListener('submit', function (event) {
             event.preventDefault();
 

@@ -10,6 +10,6 @@
     "\\src\\pages",
     "\\styles"
   ],
-  "SelectedNode": "\\src\\layouts\\layout.astro",
+  "SelectedNode": "\\src\\pages\\index.astro",
   "PreviewInSolutionExplorer": false
 }
