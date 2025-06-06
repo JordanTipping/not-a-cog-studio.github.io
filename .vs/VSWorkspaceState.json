@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assets",
+    "\\assets\\images",
+    "\\public",
     "\\src",
     "\\src\\layouts",
     "\\src\\pages"
   ],
+  "SelectedNode": "\\src\\pages\\news.astro",
   "PreviewInSolutionExplorer": false
 }
