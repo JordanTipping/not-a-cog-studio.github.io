@@ -1,15 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\assets\\css",
-    "\\assets\\images",
-    "\\public",
     "\\src",
     "\\src\\layouts",
-    "\\src\\pages",
-    "\\styles"
+    "\\src\\pages"
   ],
-  "SelectedNode": "\\src\\pages\\portfolio.astro",
+  "SelectedNode": "\\src\\layouts\\layout.astro",
   "PreviewInSolutionExplorer": false
 }
