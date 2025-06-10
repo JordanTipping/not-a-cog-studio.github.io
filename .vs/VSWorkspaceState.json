@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
+    "\\public\\images",
     "\\src",
     "\\src\\layouts",
     "\\src\\pages"
   ],
-  "SelectedNode": "\\public",
+  "SelectedNode": "\\public\\images\\NOTACOGSPLASH.png",
   "PreviewInSolutionExplorer": false
 }
