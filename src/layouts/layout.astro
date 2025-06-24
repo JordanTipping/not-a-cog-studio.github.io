@@ -2,11 +2,10 @@
 import '../styles/main.css';
 ---
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics Tag -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-97JL46MZC2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -23,23 +22,21 @@ import '../styles/main.css';
 
     <title>Not a Cog Studio</title>
 
-    <!-- Open Graph / Twitter Cards -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Not a Cog Studio" />
-    <meta property="og:description" content="Not a Cog is an independent game and development studio crafting original experiences. Based in the UK, we create games, websites, software and tools." />
+    <meta property="og:description" content="Not a Cog is an independent game and development studio crafting original experiences." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://notacog.studio" />
     <meta property="og:image" content="/assets/img/og-image.jpg" />
 
-    <!-- Load Google Fonts: Inter -->
+    <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- Main CSS -->
     <link rel="stylesheet" href="/styles/main.css" />
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="burger" id="burger">☰</div>
             <ul id="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/team">Team</a></li>
@@ -49,24 +46,24 @@ import '../styles/main.css';
         </div>
     </nav>
 
-    <!-- 💡 This is where the page content will appear -->
     <main>
         <slot />
     </main>
 
     <script>
-        function toggleMenu() {
-            document.getElementById('nav-links').classList.toggle('show');
-        }
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
     </script>
 
     <script>
         document.getElementById('contact-form')?.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            if (document.querySelector('[name="_gotcha"]').value) {
-                return;
-            }
+            if (document.querySelector('[name="_gotcha"]').value) return;
 
             document.getElementById("success-message").style.display = "block";
             document.getElementById("contact-form").style.display = "none";
@@ -74,15 +71,9 @@ import '../styles/main.css';
             fetch(event.target.action, {
                 method: "POST",
                 body: new FormData(event.target),
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        console.log("There was an issue submitting the form");
-                    }
-                })
-                .catch(error => {
-                    console.log("Error submitting form: ", error);
-                });
+            }).catch(error => {
+                console.log("Error submitting form: ", error);
+            });
         });
 
         let submitting = false;

@@ -402,7 +402,7 @@ form {
         transition: all 0.3s ease;
     }
 
-        nav ul.show {
+        #nav-links.show { 
             display: flex;
             opacity: 1;
             transform: translateY(0);
