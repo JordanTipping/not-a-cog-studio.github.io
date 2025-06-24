@@ -1,96 +1,187 @@
 ---
 import '../styles/main.css';
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="/notacog-icon.png" sizes="1028x2028" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Not a Cog is an independent game and development studio crafting original experiences. Based in the UK, we create games, websites, software and tools." />
+  <meta name="keywords" content="indie game studio, ethical game dev, web development, software tools, Not a Cog Studio, UK game dev, creative tech" />
+  <meta name="author" content="Not a Cog Studio" />
+  <title>Not a Cog Studio</title>
+  <link rel="icon" type="image/png" href="/notacog-icon.png" />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-97JL46MZC2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-97JL46MZC2');
-    </script>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Not a Cog Studio" />
+  <meta property="og:description" content="Not a Cog is an independent game and development studio crafting original experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://notacog.studio" />
+  <meta property="og:image" content="/assets/img/og-image.jpg" />
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Not a Cog is an independent game and development studio crafting original experiences. Based in the UK, we create games, websites, software and tools." />
-    <meta name="keywords" content="indie game studio, ethical game dev, web development, software tools, Not a Cog Studio, UK game dev, creative tech" />
-    <meta name="author" content="Not a Cog Studio" />
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/main.css" />
 
-    <title>Not a Cog Studio</title>
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Not a Cog Studio" />
-    <meta property="og:description" content="Not a Cog is an independent game and development studio crafting original experiences." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://notacog.studio" />
-    <meta property="og:image" content="/assets/img/og-image.jpg" />
-
-    <!-- Fonts & CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles/main.css" />
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-97JL46MZC2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-97JL46MZC2');
+  </script>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="burger" id="burger">☰</div>
-            <ul id="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/team">Team</a></li>
-                <li><a href="/news">News</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav style="background-color: var(--primary-color); padding: 10px 0;">
+  <div style="
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 50px;
+    position: relative;
+  ">
 
-    <main>
-        <slot />
-    </main>
+    <!-- LOGO: Separate Left Container -->
+    <div style="flex-shrink: 0;">
+<a href="/" style="
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  margin-right: -px;
+">
+  <img src="/notacog-icon.png" alt="Not a Cog Logo" style="
+    height: 55px;
+    width: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+  " />
+</a>
+    </div>
 
-    <script>
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('nav-links');
+    <!-- NAV LINKS: Centered Desktop -->
+    <ul id="nav-links" style="
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    ">
+      <li><a href="/">Home</a></li>
+      <li><a href="/team">Team</a></li>
+      <li><a href="/news">News</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
 
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-    </script>
+    <!-- BURGER: Separate Right Container -->
+    <div style="flex-shrink: 0;">
+      <div id="burger" class="burger" style="
+        display: none;
+        font-size: 2em;
+        color: var(--text-color);
+        cursor: pointer;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin-left: 50px;   /* ➜ Move right */
+        margin-top: -25px;    /* ➜ Move up slightly */
+      ">☰</div>
+    </div>
 
-    <script>
-        document.getElementById('contact-form')?.addEventListener('submit', function (event) {
-            event.preventDefault();
+  </div>
 
-            if (document.querySelector('[name="_gotcha"]').value) return;
+  <!-- MOBILE RULES -->
+<style>
+  @media (max-width: 768px) {
+    #burger {
+      display: flex !important;
+    }
 
-            document.getElementById("success-message").style.display = "block";
-            document.getElementById("contact-form").style.display = "none";
+    #nav-links {
+      display: none !important;
+    }
 
-            fetch(event.target.action, {
-                method: "POST",
-                body: new FormData(event.target),
-            }).catch(error => {
-                console.log("Error submitting form: ", error);
-            });
-        });
+    #nav-links.show {
+      display: flex !important;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background-color: var(--primary-color);
+      padding: 10px;
+      border-radius: 4px;
+      gap: 15px;
+      z-index: 10;
+    }
+  }
 
-        let submitting = false;
-        document.querySelector('button[type="submit"]')?.addEventListener('click', function (event) {
-            if (submitting) {
-                event.preventDefault();
-            } else {
-                submitting = true;
-                setTimeout(() => { submitting = false; }, 10000);
-            }
-        });
-    </script>
+  @media (min-width: 769px) {
+    #burger {
+      display: none !important;
+    }
 
-    <footer>
-        <p>&copy; 2025 Not a Cog Studio Ltd. All rights reserved.</p>
-    </footer>
+    #nav-links {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      gap: 30px;
+    }
+  }
+</style>
+
+</nav>
+
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Not a Cog Studio Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    burger?.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <script>
+    document.getElementById('contact-form')?.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (document.querySelector('[name="_gotcha"]').value) return;
+
+      document.getElementById("success-message").style.display = "block";
+      document.getElementById("contact-form").style.display = "none";
+
+      fetch(event.target.action, {
+        method: "POST",
+        body: new FormData(event.target),
+      }).catch(error => {
+        console.log("Error submitting form: ", error);
+      });
+    });
+
+    let submitting = false;
+    document.querySelector('button[type="submit"]')?.addEventListener('click', function (event) {
+      if (submitting) {
+        event.preventDefault();
+      } else {
+        submitting = true;
+        setTimeout(() => { submitting = false; }, 10000);
+      }
+    });
+  </script>
 </body>
 </html>
