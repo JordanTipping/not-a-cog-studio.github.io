@@ -1,31 +1,55 @@
 ---
 import Layout from '../layouts/layout.astro';
-
-
 ---
+
 <Layout>
+  <section class="section" id="contact" aria-labelledby="contact-heading">
+    <h1 id="contact-heading">Contact Us</h1>
+    <p>Want to collaborate, hire us, or ask a question? Drop us a message using the form below. We'd love to hear from you.</p>
 
-    <section class="section" id="contact" aria-labelledby="contact-heading">
-        <h1 id="contact-heading">Contact Us</h1>
-        <p>Want to collaborate, hire us, or ask a question? Drop us a message using the form below. We'd love to hear from you.</p>
+    <form id="contact-form" action="https://formspree.io/f/xdkepdvk" method="POST" style="max-width: 600px; margin: 0 auto;">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        style="width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #333; background: #1a1a1a; color: #D64638; border-radius: 4px; font-size: 1.1em;"
+      />
+      <input
+        type="email"
+        name="_replyto"
+        placeholder="Your Email"
+        required
+        style="width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #333; background: #1a1a1a; color: #D64638; border-radius: 4px; font-size: 1.1em;"
+      />
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+        style="width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #333; background: #1a1a1a; color: #D64638; border-radius: 4px; font-size: 1.1em;"
+      ></textarea>
+      <button
+        type="submit"
+        style="background-color: #D64638; border: none; padding: 15px 25px; color: black; cursor: pointer; font-weight: bold; border-radius: 4px; font-size: 1.1em; transition: background 0.3s;"
+      >
+        Send Message
+      </button>
 
-        <form id="contact-form" action="https://formspree.io/f/xdkepdvk" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="_replyto" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+      <input type="text" name="_gotcha" style="display: none" />
+    </form>
 
-            
-            <input type="text" name="_gotcha" style="display:none">
-        </form>
+    <div id="success-message" style="display: none; margin-top: 20px; text-align: center; color: #aaaaaa;">
+      <p>Thank you! We will get back to you shortly.</p>
+    </div>
 
-    
-        <div id="success-message" style="display:none; margin-top: 20px;">
-            <p>Thank you! We will get back to you shortly.</p>
-        </div>
-
-        <div class="contact-email">
-            <p>Or, email us directly at <a href="mailto:contact@notacog.studio">contact@notacog.studio</a>.</p>
-        </div>
-    </section>
+    <div class="contact-email" style="text-align: center; margin-top: 20px; font-size: 0.95em;">
+      <p>
+        Or, email us directly at
+        <a href="mailto:contact@notacog.studio" style="color: #D64638; text-decoration: underline; font-weight: 500;">
+          contact@notacog.studio
+        </a>.
+      </p>
+    </div>
+  </section>
 </Layout>
